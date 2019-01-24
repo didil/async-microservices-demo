@@ -24,8 +24,8 @@ app.post('/api/v1/processData', async function (req, res) {
   let channel = await connection.createConfirmChannel();
 
   // publish the data to Rabbit MQ
-  let data = req.body;
-  await publishToChannel(channel, { routingKey: "request", exchangeName: "processing", data });
+  let requestData = req.body;
+  await publishToChannel(channel, { routingKey: "request", exchangeName: "processing", data: { requestId, requestData } });
 
   // send the request id in the response
   res.send({ requestId })
