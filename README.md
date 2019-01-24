@@ -7,7 +7,7 @@ After installing Rabbitmq, run
 cd web-service
 npm install
 node web-service.js
-# in a different terminal
+// in a different terminal
 cd processor-service 
 npm install
 node processor-service.js
@@ -24,6 +24,6 @@ curl --header "Content-Type: application/json" \
 You should see the results in the web service terminal after a few seconds:
 ````
 Results saved
-requestId: x , resultsData: my-processed-data
+requestId: x , resultsData: my-data-processed
 
 ````

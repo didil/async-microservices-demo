@@ -1,0 +1,6 @@
+{
+  "name": "async-microservices-demo-processor",
+  "dependencies": {
+    "amqplib": "^0.5.3"
+  }
+}
