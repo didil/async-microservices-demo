@@ -1,6 +1,6 @@
 const amqp = require('amqplib');
 
-// rabbitMQ connection string with our demo parameters (this should not be in the code for a production app)
+// RabbitMQ connection string with our demo parameters (this should not be in the code for a production app)
 const messageQueueConnectionString = "amqp://appuser:123456@localhost:5672/async-microservices-demo";
 
 async function listenForMessages() {
