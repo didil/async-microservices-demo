@@ -1,7 +1,10 @@
+const path  = require('path');
+require('dotenv').config({path:  path.resolve(process.cwd(), '../.env')});
+
 const amqp = require('amqplib');
 
-// RabbitMQ connection string with our demo parameters (this should not be in the code for a production app)
-const messageQueueConnectionString = "amqp://appuser:123456@localhost:5672/async-microservices-demo";
+// RabbitMQ connection string
+const messageQueueConnectionString = process.env.CLOUDAMQP_URL;
 
 async function listenForMessages() {
   // connect to Rabbit MQ

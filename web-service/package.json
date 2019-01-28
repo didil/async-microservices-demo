@@ -1,8 +1,0 @@
-{
-  "name": "async-microservices-demo-web",
-  "dependencies": {
-    "amqplib": "^0.5.3",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4"
-  }
-}

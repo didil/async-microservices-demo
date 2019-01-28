@@ -1,15 +1,14 @@
 # Asynchronous Microservices with RabbitMQ and Node.js
 
 ## Setup
-After installing RabbitMQ, run
+After Provisioning RabbitMQ, run
 ````
-./rabbit_mq_setup.sh
-cd web-service
 npm install
+node rabbit_mq_setup.js
+cd web-service
 node web-service.js
 // in a different terminal
 cd processor-service 
-npm install
 node processor-service.js
 ````
 

@@ -1,3 +1,6 @@
+const path  = require('path');
+require('dotenv').config({path:  path.resolve(process.cwd(), '../.env')});
+
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -10,8 +13,8 @@ app.use(bodyParser.json());
 // simulate request ids
 let lastRequestId = 1;
 
-// RabbitMQ connection string with our demo parameters (this should not be in the code for a production app)
-const messageQueueConnectionString = "amqp://appuser:123456@localhost:5672/async-microservices-demo";
+// RabbitMQ connection string
+const messageQueueConnectionString = process.env.CLOUDAMQP_URL;
 
 // handle the request
 app.post('/api/v1/processData', async function (req, res) {
